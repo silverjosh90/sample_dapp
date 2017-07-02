@@ -8,7 +8,8 @@ var dotenv = require('dotenv').load();
 
 console.log('It is working', web3.eth.blockNumber);
 
-var account = process.env.ACCOUNT;
+web3.eth.defaultAccount = web3.eth.accounts[0]
+var account = web3.eth.defaultAccount
 var balanceWei = web3.eth.getBalance(account).toNumber();
 var balance = web3.fromWei(balanceWei, 'ether')
 console.log('I am the balance', balance);
@@ -24,6 +25,8 @@ function getContract(filename) {
 
 getContract(contract).then(function(result){
   var compiled = solc.compile(result, 1);
-  console.log('THIS IS COMPILED!!!!', compiled.contracts[':SimpleStorage'].gasEstimates);
+	metaData = JSON.parse(compiled.contracts[':SimpleStorage'].metadata)
+	console.log('THIS IS THE METADATA', metaData.output.abi);
+
 
 });
