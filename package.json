@@ -1,0 +1,24 @@
+{
+  "name": "sample_dapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silverjosh90/sample_dapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/silverjosh90/sample_dapp/issues"
+  },
+  "homepage": "https://github.com/silverjosh90/sample_dapp#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "solc": "^0.4.11",
+    "web3": "^0.19.1"
+  }
+}
